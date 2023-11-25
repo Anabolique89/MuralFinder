@@ -34,6 +34,8 @@ $profileInfo = new ProfileInfoView();
                     }
                     ?>
 
+                </div>
+                <div class="profile-info-about">
                     <p> <?php
 
                         if (isset($_SESSION['username']) && !empty($_SESSION['username'])) {
@@ -41,16 +43,16 @@ $profileInfo = new ProfileInfoView();
                         }
 
                         ?></p>
-                    <div class="break"></div>
-                    <a href="profilesettings.php" class="follow-btn">PROFILE SETTINGS</a>
-                </div>
-                <div class="profile-info-about">
                     <h3>ABOUT</h3>
-                    <p> <?php
-                        $profileInfo->fetchAbout($_SESSION["userid"]);
-                        ?></p>
+                    <p class="profile-username-display"> <?php
+                                                            $profileInfo->fetchAbout($_SESSION["userid"]);
+                                                            ?></p>
                     <h3>FOLLOWERS</h3>
                     <h3>FOLLOWING</h3>
+
+
+                    <div class="break"></div>
+                    <a href="profilesettings.php" class="follow-btn">PROFILE SETTINGS</a>
                 </div>
             </div>
             <div class="profile-content">
@@ -61,6 +63,7 @@ $profileInfo = new ProfileInfoView();
                     <p> <?php
                         $profileInfo->fetchText($_SESSION["userid"]);
                         ?></p>
+
                 </div>
                 <div class="profile-posts">
                     <h3>POSTS</h3>
@@ -122,7 +125,7 @@ $profileInfo = new ProfileInfoView();
         <input type="text" name="filedesc" placeholder="Image Description..." class="input-text">
         </div
         <div class="input-wrapper">
-        <input type="file" name="file">
+        <input type="file" name="file" class="add-artwork">
         <button type="submit" name="submit" class="header-login-a">UPLOAD</button>
         </div>
       
