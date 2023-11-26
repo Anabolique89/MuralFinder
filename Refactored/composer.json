@@ -1,0 +1,12 @@
+{
+    "require": {
+    },
+    "autoload": {
+        "psr-4": {
+            "Database\\": "Database/",
+            "Database\\Models\\": "Database/Models/",
+            "Controllers\\Auth\\": "Controllers/Auth/",
+            "Controllers\\Profile\\": "Controllers/Profile/"
+        }
+    }
+}
