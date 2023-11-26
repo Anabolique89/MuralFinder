@@ -1,8 +1,8 @@
 <?php
 
-namespace Refactored\Controllers\Artwork;
+namespace  Controllers\Artwork;
 
-use Refactored\Database\Models\Artwork;
+use  Database\Models\Artwork;
 
 class ArtworkController extends Artwork
 {

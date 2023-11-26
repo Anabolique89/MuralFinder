@@ -6,13 +6,15 @@
  * PHP version 8.2
  *
  * @category Model
- * @package  Refactored\Database\Models
+ * @package   Database\Models
  * @author   @Andrew21-mch nfonandrew73@gmail.como
  * @license  https://opensource.org/licenses/MIT MIT License
  * @link     https://your-website.com
  */
 
-namespace Refactored\Database\Models;
+namespace  Database\Models;
+
+require_once __DIR__ . '/../../vendor/autoload.php';
 
 use Database\Connection;
 
@@ -59,13 +61,6 @@ class Artwork extends Connection
      * @param string|null $description Description of the artwork.
      * @param float|null  $price       Price of the artwork.
      */
-    public function __construct($title = null, $artist = null, $description = null, $price = null)
-    {
-        $this->title = $title;
-        $this->artist = $artist;
-        $this->description = $description;
-        $this->price = $price;
-    }
 
     /**
      * Set the artwork ID.

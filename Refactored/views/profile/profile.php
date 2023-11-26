@@ -26,7 +26,7 @@ include_once "../components/header.php";
                     <h3>ABOUT</h3>
                     <p>
                         <?php
-                        $profileInfo->fetchAbout($_SESSION["userid"]);
+                        // $profileInfo->fetchAbout($_SESSION["userid"]);
                         ?>
                     </p>
                     <h3>FOLLOWERS</h3>

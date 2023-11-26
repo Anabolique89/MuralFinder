@@ -1,22 +1,28 @@
 <?php
 
+
 /**
  * This file handles POST and PUT requests for various actions related to authentication and user actions.
  *
  * PHP version 8.2
  *
  * @category Route
- * @package  Refactored\Route
+ * @package   Route
  * @author   @Andrew21-mch <nfonandrew73@gmail.com>
  * @license  https://opensource.org/licenses/MIT MIT License
  * @link     https://your-website.com
  */
 
-namespace Refactored\Route;
+namespace Route;
 
-use Refactored\Controllers\Artwork\ArtworkController;
-use Refactored\Controllers\Auth\AuthController;
-use Refactored\Controllers\Profile\ProfileController;
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+
+require_once __DIR__ . '/../vendor/autoload.php';
+
+use  Controllers\Artwork\ArtworkController;
+use  Controllers\Auth\AuthController;
+use  Controllers\Profile\ProfileController;
 
 /**
  * Check if a session is not already started.

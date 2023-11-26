@@ -1,9 +1,5 @@
 <?php
 
-include_once "../../vendor/autoload.php";
-
-use Database\Models\Profile;
-
 include_once "../components/header.php";
 
 
@@ -19,8 +15,6 @@ include_once "../components/header.php";
                 <?php
                 $profile = Profile::fetchProfile($_SESSION['userid']);
 
-                var_dump($profile['bio']);
-                // die();
 
 
                 

@@ -1,11 +1,23 @@
 <?php
-namespace Refactored\Controllers\Auth;
+namespace Controllers\Auth;
 
-use Refactored\Controllers\Profile\ProfileController;
-use Refactored\Database\Models\User;
+/**
+ * Check if a session is not already started.
+ */
+if (session_status() == PHP_SESSION_NONE) {
+    // Start the session
+    session_start();
+}
+
+require_once __DIR__ . '/../../vendor/autoload.php';
+
+
+use Controllers\Profile\ProfileController;
+use Database\Models\User;
 
 class AuthController extends User
 {
+
 
     public function login($request)
     {
@@ -14,7 +26,17 @@ class AuthController extends User
         $user->setEmail($request['email']);
         $user->setPassword($request['password']);
         $result = $user->loginUser();
-        header("Location: ../../views/profile/profile.php");
+        if ($result['success']) {
+            $_SESSION['message'] = $result['message'];
+            header("Location: ../views/profile/profile.php");
+            exit();
+        }
+
+        $_SESSION['error'] = $result['message'];
+        header("Location: " . $_SERVER['HTTP_REFERER']);
+        exit();
+
+
     }
 
     public function register($request)
@@ -33,15 +55,19 @@ class AuthController extends User
             exit();
         }
 
-        header("Location: ../../views/profile/profile.php");
+        $_SESSION['message'] = "Registration successfull, please login.";
+        header("Location: ../views/auth/indexlogin.php");
 
     }
 
     public function logout()
     {
-        $this->logout();
-        header("Location: ../../views/auth/indexlogin.php");
+        session_unset();
+        session_destroy();
+        header("Location: ../views/auth/indexlogin.php");
+        exit();
     }
+
 
     public function deleteAccount($userId)
     {

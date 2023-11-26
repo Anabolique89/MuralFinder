@@ -6,13 +6,16 @@
  * PHP version 8.2
  *
  * @category Model
- * @package  Refactored\Database\Models
+ * @package   Database\Models
  * @author   @Andrew21-mch nfonandrew73@gmail.com
  * @license  https://opensource.org/licenses/MIT MIT License
  * @link     https://your-website.com
  */
 
-namespace Refactored\Database\Models;
+namespace  Database\Models;
+
+require_once __DIR__ . '/../../vendor/autoload.php';
+
 
 use Database\Connection;
 

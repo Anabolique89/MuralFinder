@@ -12,9 +12,11 @@
  * @link     https://your-website.com
  */
 
-namespace Refactored\Database\Models;
+namespace Database\Models;
 
+require_once __DIR__ . '/../../vendor/autoload.php';
 use Database\Connection;
+use Database\Models\Profile;
 
 /**
  * User Model Class extending Connection.

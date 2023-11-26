@@ -4,9 +4,6 @@ namespace Database;
 
 class Connection
 {
-    protected $username;
-    protected $password;
-    protected $database;
 
 
     protected static function connect()
@@ -14,7 +11,7 @@ class Connection
         try {
             $username = "root";
             $password = "";
-            $dbh = new \PDO('mysql:host=localhost;dbname=artzoro', $username, $password);
+            $dbh = new \PDO('mysql:host=localhost;dbname=artzoro', $username, '');
             return $dbh;
         } catch (\PDOException $e) {
             print "Error!: " . $e->getMessage() . "<br/>";

@@ -1,7 +1,7 @@
 <?php
 
-namespace Refactored\Controllers\Profile;
-use Refactored\Database\Models\Profile;
+namespace  Controllers\Profile;
+use  Database\Models\Profile;
 
 /**
  * Profile Controller Class
