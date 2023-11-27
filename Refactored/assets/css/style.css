@@ -12,7 +12,7 @@ body, html{
     width: 100%;
     min-height: 100%;
     overflow:hidden;
-    min-height: 99vh;
+    min-height: 100vh;
 }
 body {
    /* background: linear-gradient(90deg,#FFFF00 6%,#FFA500 25%,#F14444 45%,#D53567 55%,#9A109A 94%); */
@@ -34,9 +34,7 @@ background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
 */
 
 
-body {
-    font-family: Arial, sans-serif;
-}
+
 .main{
     background: #4158D0;
     display: flex;
@@ -121,11 +119,9 @@ p {
 }
 
 .btn:hover {
-    background-color: #0056b3;
+    background-color: #000;
+    color: #fff;
 }
-
-/* dani */
-
 
 .menu-member {
     width: fit-content;
@@ -145,17 +141,14 @@ p {
     padding: 10px 16px;
 }
 
-.header-login-a {
-    background-color: #3F97EF;
-    border-radius: 4px;
-}
 
 header a:hover {
     opacity: 80%;
 }
 
 .header-login-a:hover {
-    background-color: #2073C7;
+    background-color: #000;
+    color: #fff;
     opacity: 100%;
 }
 

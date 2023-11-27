@@ -12,7 +12,7 @@
  * @link     https://your-website.com
  */
 
-namespace  Database\Models;
+namespace Database\Models;
 
 require_once __DIR__ . '/../../vendor/autoload.php';
 
@@ -210,45 +210,6 @@ class Profile extends Connection
     }
 
     /**
-     * Upload the profile image for the user.
-     *
-     * @param int    $userId User ID.
-     * @param string $image  Uploaded image file.
-     *
-     * @return array Result of the upload operation.
-     */
-    public function uploadProfileImage($userId, $image)
-    {
-        // Check if the user with the provided ID exists
-        $user = $this->getUserById($userId);
-
-        if ($user) {
-            // Directory where profile images are stored
-            $uploadDir = 'profile_images/';
-
-            // Check if the upload directory exists, create it if not
-            if (!file_exists($uploadDir)) {
-                mkdir($uploadDir, 0777, true);
-            }
-
-            // Generate a unique file name to prevent overwriting
-            $fileName = uniqid('profile_') . '_' . time() . '.' . pathinfo($image['name'], PATHINFO_EXTENSION);
-
-            // Move the uploaded file to the profile images directory
-            $destination = $uploadDir . $fileName;
-            move_uploaded_file($image['tmp_name'], $destination);
-
-            // Update the user's profile image in the database
-            $this->updateProfileImage($userId, $fileName);
-
-            return ['success' => true, 'message' => 'Profile image uploaded successfully'];
-        } else {
-            // User with the provided ID doesn't exist
-            return ['error' => 'User not found'];
-        }
-    }
-
-    /**
      * Get the user by ID.
      *
      * @param int $userId User ID.
@@ -268,11 +229,20 @@ class Profile extends Connection
      * @param int    $userId   User ID.
      * @param string $fileName File name of the uploaded image.
      *
-     * @return void
+     * @return bool
      */
-    private function updateProfileImage($userId, $fileName)
+    protected function updateProfileImage($userId, $fileName)
     {
-        $stmt = $this->conn->prepare('UPDATE profiles SET profile_image = ? WHERE user_id = ?');
-        $stmt->execute([$fileName, $userId]);
+        try {
+            $stmt = $this->conn->prepare('UPDATE profiles SET profile_img = ? WHERE user_id = ?');
+            $stmt->execute([$fileName, $userId]);
+
+            // Check if the update was successful
+            return $stmt->rowCount() > 0;
+        } catch (\PDOException $e) {
+            // Handle any potential exceptions (e.g., database connection issues)
+            return false;
+        }
     }
+
 }

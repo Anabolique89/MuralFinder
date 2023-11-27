@@ -1,37 +1,31 @@
+
 @font-face {
     font-family: 'Gotham Black';
     src: url("./fonts/GOTHAM-BLACK.woff");
 
-}
-
-body,
-h1,
-p,
-ul,
-li {
+  }body, h1, p, ul, li {
     margin: 0;
     padding: 0;
 }
 
-body,
-html {
+body, html{
     width: 100%;
     min-height: 100%;
-    overflow: hidden;
+    overflow:hidden;
     height: 100vh;
-    width: 100vw;
+  width: 100vw;
 }
 
 body {
-    /* background: linear-gradient(90deg,#FFFF00 6%,#FFA500 25%,#F14444 45%,#D53567 55%,#9A109A 94%); */
-    display: flex;
-    background-color: #21D4FD;
-    background-image: linear-gradient(19deg, #21D4FD 0%, #8921ff 33%, #3506a8 66%, #02f9f7 100%);
-    background-repeat: no-repeat;
-    background-size: cover;
-    align-items: center;
-    justify-content: center;
-
+   /* background: linear-gradient(90deg,#FFFF00 6%,#FFA500 25%,#F14444 45%,#D53567 55%,#9A109A 94%); */
+   display: flex;
+   background-color: #21D4FD;
+background-image: linear-gradient(19deg, #21D4FD 0%, #8921ff 33%, #3506a8 66%, #02f9f7 100%);
+   background-repeat: no-repeat;
+   background-size: cover;
+   align-items: center;
+   justify-content: center;
+   
 }
 
 /* 
@@ -57,7 +51,7 @@ background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
     z-index: 4;
 }
 */
-main {
+main{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -65,20 +59,18 @@ main {
 }
 
 
-.graphics {
+.graphics{
     position: relative;
     z-index: 3;
-
+   
 }
-
-.graphics3 {
+.graphics3{
     margin-top: 3rem;
     width: 5rem;
     position: relative;
     z-index: 3;
 }
-
-.onboarding-page-login {
+ .onboarding-page-login {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -91,36 +83,33 @@ main {
     padding: 25px;
     z-index: 10;
     position: absolute;
-
+ 
 }
-
-input {
+input{
     font-size: 0.8rem;
     font-family: 'Roboto';
     font-weight: 300;
 }
-
-.logo-container img {
-    width: 60px;
-    padding: 0;
-    margin: 0;
+.logo-container img{
+width: 60px;
+padding: 0;
+margin: 0;
 }
 
-.input-wrapper {
+.input-wrapper{
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
     margin: 1.7rem 0rem;
+  }
+
+.input-wrapper .input-label, .input-wrapper .input-text{
+  position: absolute;
+  width: 80%;
 }
 
-.input-wrapper .input-label,
-.input-wrapper .input-text {
-    position: absolute;
-    width: 80%;
-}
-
-.input-wrapper .input-text {
+.input-wrapper .input-text{
     padding: 0.6rem 1rem;
     border-radius: 2rem;
     box-shadow: inset 2px 2px 5px #BABECC, inset -5px -5px 10px #EEE;
@@ -128,25 +117,21 @@ input {
     border: none;
     transition: all 0.2s ease;
     background: #E5F3FE;
-}
-
-.input-wrapper .input-text:focus {
+  }
+  .input-wrapper .input-text:focus{
     box-shadow: inset 2px 2px 1px #BABECC, inset -2px -2px 5px #EEE;
-}
-
-.input-wrapper .input-label {
+  }
+  .input-wrapper .input-label{
     left: 1rem;
     text-shadow: 1px 1px 1px #FFF;
-    pointer-events: none;
+    pointer-events:none;
     transition: all 0.6s ease;
-}
-
-.input-text:valid~.input-label,
-.input-text:focus~.input-label {
+  }
+  .input-text:valid ~ .input-label, .input-text:focus ~ .input-label{
     font-size: 0.8rem;
     transform: translate(-0.2rem, -1.96rem);
     color: #AAA;
-}
+  }
 
 h1 {
     font-size: 28px;
@@ -158,25 +143,21 @@ p {
     font-family: 'Roboto';
 
 }
-
-.bottom-p-text {
+.bottom-p-text{
     margin-top: 10px;
 }
-
-.welcome-heading-small {
+.welcome-heading-small{
     font-family: 'Gotham Black';
     font-size: 2rem;
 }
-
-.roboto-uppercase-heading {
+.roboto-uppercase-heading{
     margin-top: 50px;
     font-family: 'Roboto';
     text-transform: uppercase;
     font-weight: 300;
     font-size: 1.3rem;
 }
-
-.welcome-text {
+.welcome-text{
     font-family: 'Roboto';
     font-size: 1rem;
 }
@@ -194,16 +175,15 @@ p {
     border-radius: 20px;
     font-weight: bold;
     text-transform: uppercase;
-    cursor: pointer;
+   cursor: pointer;
 }
 
 .btn:hover {
     background-color: #E5F3FE;
     color: #000;
 }
-
-.signup-form {
-    display: flex;
+.signup-form{
+    display:flex;
     flex-direction: column;
     justify-content: center;
 }
@@ -238,8 +218,6 @@ p {
         padding: 8px 16px;
         font-size: 14px;
     }
-
-
 }
 
 
