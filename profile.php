@@ -5,7 +5,6 @@ include_once "header.php";
 
 include "classes/dbh.classes.php";
 include "classes/profileinfo.classes.php";
-//include "classes/profileinfo-contr.classes.php";
 include "classes/profileinfo-view.classes.php";
 
 $profileInfo = new ProfileInfoView();
@@ -112,7 +111,7 @@ $profileInfo = new ProfileInfoView();
             if (isset($_SESSION['username'])) {
                 echo '
                 <h2>Add new artwork here</h2>
-                    <div class="form-wrapper">
+                    <div class="form-wrapper profile-posts">
                     
     <form class="signup-form" action="includes/gallery-upload.inc.php" method="post" enctype="multipart/form-data">
     <div class="input-wrapper">
@@ -130,7 +129,7 @@ $profileInfo = new ProfileInfoView();
         </div>
       
     </form>
-</div> 
+
 </div>';
             }
             ?>

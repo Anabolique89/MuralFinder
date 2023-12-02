@@ -132,7 +132,7 @@ header a:hover {
  /* background-color: #4158D0;
 background-image: linear-gradient(0deg, #4158D0 0%, #C850C0 30%, #c2f9cd 66%, #5bd2e7 100%); */
 background-color: #21D4FD;
-background-image: linear-gradient(19deg, #21D4FD 0%, #8921ff 100%);
+background-image: linear-gradient(19deg, #21D4FD 50%, #2521fd 0%, #8921ff 100%);
 
 
 }
@@ -192,9 +192,9 @@ background-image: linear-gradient(19deg, #21D4FD 0%, #8921ff 100%);
 }
 
 .index-intro-c2 h2 {
-    font-family: Roboto;
+    font-family: 'Gotham Black';
     color: #fff;
-    font-size: 70px;
+    font-size: 60px;
     line-height: 82px;
     margin-left: 60px;
     padding-bottom: 34px;
@@ -323,8 +323,7 @@ img.logo-container{
 }
 
 .profile-info-img {
-  
-   background-color: hotpink ;
+  background-image: url('artworks/default.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 100px;

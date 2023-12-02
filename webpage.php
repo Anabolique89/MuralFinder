@@ -25,7 +25,7 @@ session_start();
                     <li><a href="webpage.php">HOME</a></li>
                     <li><a href="about.php">ABOUT</a></li>
                     <li><a href="map.php">MAP</a></li>
-                    <li><a href="features.php">FEATURES</a></li>
+                    <li><a href="walls.php">WALLS</a></li>
                     <li><a href="community.php">COMMUNITY</a></li>
                     <li><a href="shops.php">SHOPS</a></li>
                     <li><a href="contact.php">CONTACT</a></li>
@@ -57,7 +57,7 @@ session_start();
                 <div class="wrapper">
                     <div class="index-intro-c1">
 
-                        <div class="video"><img src="graphics/szxs.png" alt="" class="hero-graphic1"></div>
+                        <div class="video"><img src="graphics/szxs.png" alt="fluidelement 1" class="hero-graphic1"></div>
                         <p>A platform that connects the urban art community worldwide and allows artists to explore new terrain and expand their creative talents easily all the while meeting new people and sharing new experiences with fellow artists. </p>
                     </div>
                     <div class="index-intro-c2">
@@ -94,6 +94,7 @@ session_start();
 
                     ?>
                 </div>
+                <button class="btn header-login-a ">See all Artworks</button>
             </div>
         </section>
         <!-- publish new walls section -->
@@ -101,22 +102,77 @@ session_start();
             <div class="index-intro-bg">
 
                 <div class="wrapper">
+
+                    <div class="index-intro-c1">
+
+                        <div class="video">
+                            <img src="graphics/szxc.png" alt="fluidelement 2" class="hero-graphic">
+                        </div>
+                        <p>If you are an artist or a stakeholder and you want to share a new painted wall with the world for them to paint on or just explore in a certain location, we are here to make that happen. Just contact us and we will verify the information and make it happen! </p>
+                    </div>
                     <div class="index-intro-c2">
-                        <h2>Publish new<br>Walls</h2>
+                        <h2>Review<br>Walls</h2>
+                        <a clas="header-login-a" href="map.php">REVIEW WALL</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Subscribe or Register to Newsletter section here  -->
+        <section class="newsletter">
+            <div class="newsletter-bg">
+                <div class="wrapper">
+                    <h2 class="newsletter">NEWSLETTER</h2>
+                    <p class="newsletter-p">Subscribe to our newsletter to receive updates and news.</p>
+                    <form action="newsletter.php">
+                        <div class="input-wrapper">
+                            <input type="text" name="email" placeholder="Your email here..." class="input-text">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <!-- publish new walls section 3 -->
+        <section class="index-intro">
+            <div class="index-intro-bg">
+
+                <div class="wrapper">
+                    <div class="index-intro-c2">
+                        <h2>Add New <br>Walls</h2>
                         <a clas="header-login-a" href="map.php">ADD NEW WALL</a>
                     </div>
                     <div class="index-intro-c1">
 
                         <div class="video">
-                            <img src="graphics/szxc.png" alt="" class="hero-graphic">
+                            <img src="graphics/sdfc.png" alt="fluidelement 3" class="hero-graphic">
                         </div>
-                        <p>If you are an artist or a stakeholder and you want to share a new painted wall with the world for them to paint on or just explore in a certain location, we are here to make that happen. Just contact us and we will verify the information and make it happen! </p>
+                        <p>If you are a registered user and have any legal walls in mind don't hesitate to add them to our map. By doing this you are sharing with and helping
+                            thousands of artists that are looking for places to paint or explore. </p>
                     </div>
 
                 </div>
             </div>
         </section>
+        <!--wall feed or POST FEED goes here-->
+        <!-- find  new walls section -->
+        <section class="index-intro">
+            <div class="index-intro-bg">
 
+                <div class="wrapper">
+
+                    <div class="index-intro-c1">
+
+                        <div class="video">
+                            <img src="graphics/sds.png" alt="fluidelement4" class="hero-graphic">
+                        </div>
+                        <p>If you are an artist or a stakeholder and you want to share a new painted wall with the world for them to paint on or just explore in a certain location, we are here to make that happen. Just contact us and we will verify the information and make it happen! </p>
+                    </div>
+                    <div class="index-intro-c2">
+                        <h2>Find New<br>Walls</h2>
+                        <a clas="header-login-a" href="map.php">FIND WALLS</a>
+                    </div>
+                </div>
+            </div>
+        </section>
         <div class="main"></div>
         <div class="footer">
             <div class="bubbles">
