@@ -23,7 +23,7 @@ $profileInfo = new ProfileInfoView();
 <body>
 
     <main>
-        <img src="./graphics/bubbles.png" class="graphics" alt="bubbles">
+        <img src="./img/graphics/bubbles.png" class="graphics" alt="bubbles">
         <div class="onboarding-page-login">
             <div class="logo-container"><a href="homepage.php"><img src="./img/LOGOWhite.png" alt="logo white"></a></div>
             <p>What's your profile?</p>
@@ -45,23 +45,13 @@ $profileInfo = new ProfileInfoView();
                     <div class="input-wrapper">
                         <input type="text" name="UserProfile" placeholder="Artist or Artlover?" class="input-text">
                     </div>
+                    <input type="hidden" name="role" value="user">
                     <br>
                     <button type="submit" name="submit" class="submit-button btn">CREATE ACCOUNT</button>
                 </form>
                 <p class="bottom-p-text">Already have an account yet?<a class="link" href="indexlogin.php"> Login here!</a></p>
             </div>
-            <!--
-            <div class="index-login-login">
-                <h4>LOGIN</h4>
-                <p>Don't have an account yet? Sign up here!</p>
-                <form action="includes/login.inc.php" method="post">
-                    <input type="text" name="uid" placeholder="Username">
-                    <input type="password" name="pwd" placeholder="Password">
-                    <br>
-                    <button type="submit" name="submit">LOGIN</button>
-                </form>
-            </div>
-            -->
+
         </div>
     </main>
 </body>

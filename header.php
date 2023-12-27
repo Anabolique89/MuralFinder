@@ -11,6 +11,7 @@ session_start();
     <title>ArtZoro Presentation Website</title>
     <link rel="stylesheet" href="style1.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
@@ -33,12 +34,12 @@ session_start();
                 <?php
                 if (isset($_SESSION["userid"])) {
                 ?>
-                    <li><a href="profile.php"><?php echo $_SESSION["username"]; ?></a></li>
+                    <li><a class="blow-brush-profile" href="profile.php"><?php echo $_SESSION["username"]; ?></a></li>
                     <li><a href="includes/logout.inc.php" class="header-login-a">LOGOUT</a></li>
                 <?php
                 } else {
                 ?>
-                    <li><a href="indexsignup.php">SIGN UP</a></li>
+                    <li><a class="blow-brush-profile" href="indexsignup.php">SIGN UP</a></li>
                     <li><a href="indexlogin.php" class="header-login-a ">LOGIN</a></li>
                 <?php
                 }

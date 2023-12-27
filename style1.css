@@ -1,3 +1,16 @@
+@font-face {
+  font-family: "Blow Brush";
+  src:
+    url("fonts/blowbrush.woff2") format("woff2"),
+    url("fonts/blowbrush.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Gotham Black';
+  src: url("./fonts/GOTHAM-BLACK.woff");
+
+}
 * {
     margin: 0;
     padding: 0;
@@ -5,7 +18,7 @@
 /*
 great looking gradient
 background-color: #4158D0;
-background-image: linear-gradient(0deg, #4158D0 0%, #C850C0 30%, #c2f9cd 66%, #5bd2e7 100%);
+
 */
 body{
 background-color: #4158D0;
@@ -39,6 +52,7 @@ header {
     height: 80px;
     background-color:rgba(38, 48, 62, 0.0);
     position: absolute;
+    z-index: 999;
 }
 
 header nav {
@@ -94,11 +108,13 @@ header nav .menu-member li {
 
 header nav .menu-member li a {
     font-size: 16px;
-    font-family: Roboto;
+    font-family: 'Gotham Black';
     color: #fff;
     text-decoration: none;
     padding: 10px 16px;
 }
+
+
 
 .header-login-a {
     font-family: 'Gotham Black';
@@ -132,17 +148,42 @@ header a:hover {
  /* background-color: #4158D0;
 background-image: linear-gradient(0deg, #4158D0 0%, #C850C0 30%, #c2f9cd 66%, #5bd2e7 100%); */
 background-color: #21D4FD;
-background-image: linear-gradient(19deg, #21D4FD 50%, #2521fd 0%, #8921ff 100%);
+background-image: linear-gradient(0deg, #4158D0 0%, #C850C0 30%, #c2f9cd 66%, #5bd2e7 100%);
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
 
-
+}
+.contact-form-text{
+  width: 200px;
+  margin-left: 150px;
 }
 .index-intro {
     width: 100%;
     height: 580px;
-    background-image: url("img/bg-img.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    display: flex;
+    align-items: center;
+    
+}
+.index-intro2 {
+  width: 100%;
+  height: 500px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  /* border-radius: 10px 10px 10px 10px;
+  border-radius: 25px; */
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(30px);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 80px rgba(0, 0, 0, 0.2);
+  /* padding: 25px; */
 }
 .graphics{
   width: 80;
@@ -160,7 +201,7 @@ background-image: linear-gradient(19deg, #21D4FD 50%, #2521fd 0%, #8921ff 100%);
     justify-content: flex-start;
     align-items: center;
     position: relative;
-    z-index: 10;
+
 }
 
 .index-intro-c1, .index-intro-c2 {
@@ -177,8 +218,24 @@ background-image: linear-gradient(19deg, #21D4FD 50%, #2521fd 0%, #8921ff 100%);
     background-size: cover;
     margin-bottom: 20px;
 }
+.index-intro-c1 .video2 {
+  width: 454px;
+  height: 178px;
+  background-image: url("img/video-bg.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.contact-title{
+  font-family: 'Gotham Black';
+  color: #fff;
+  font-size: 45px;
+  line-height: 60px;
+  margin-left: 20px;
+  padding-bottom: 5px;
+}
 .hero-graphic{
-  width: 350px;
+  width: 330px;
   height: auto;
 }
 .hero-graphic1{
@@ -189,6 +246,7 @@ background-image: linear-gradient(19deg, #21D4FD 50%, #2521fd 0%, #8921ff 100%);
 .index-intro-c1 p {
     padding-left: 20px;
     border-left: 4px solid #3F97EF;
+    width: 80%;
 }
 
 .index-intro-c2 h2 {
@@ -311,7 +369,22 @@ img.logo-container{
     padding: 7rem 0rem;
     
 }
-
+/*
+.map{
+  background-image: url("img/map.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+   width: 100%;
+   padding: 7rem 0rem;
+   
+}
+*/
+.profile-info-about .username-name{
+  font-family: 'Blow Brush';
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 20px;
+}
 .profile-bg .wrapper {
     height: 100%;
     display: flex;
@@ -319,11 +392,19 @@ img.logo-container{
 }
 
 .profile-info {
-  width: 240px;
+  width: 200px;
+  background-color: #fff;
+  border-radius: 10px 10px 10px 10px;
+  border-radius: 25px;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(30px);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 80px rgba(0, 0, 0, 0.2);
+  padding: 25px;
 }
 
 .profile-info-img {
-  background-image: url('artworks/default.jpg');
+  background-image: url('img/artworks/default.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 100px;
@@ -332,6 +413,9 @@ img.logo-container{
   flex-wrap: wrap;
   width: 200px;
  height: 200px;
+ -webkit-box-shadow: -10px -10px 28px 0px rgba(255,255,255,0.8);
+ -moz-box-shadow: -10px -10px 28px 0px rgba(255,255,255,0.8);
+ box-shadow: -10px -10px 28px 0px rgba(255,255,255,0.8);
 }
 
 .profile-info-img p {
@@ -373,6 +457,7 @@ img.logo-container{
 
 .profile-info-about {
   padding: 10px 20px;
+  text-align: center;
 }
 
 .profile-info-about h3 {
@@ -385,6 +470,7 @@ img.logo-container{
 }
 
 .profile-info-about p {
+  font-family: "blowbrush";
   font-size: 14px;
   line-height: 20px;
   color: #000;
@@ -399,7 +485,7 @@ img.logo-container{
 .profile-intro {
   width: calc(100% - 20px);
   margin-left: 20px;
-  padding-bottom: 30px;
+  padding-bottom: 20px;
   border-radius: 10px 10px 10px 10px;
 }
 
@@ -420,7 +506,28 @@ img.logo-container{
   padding: 0px 20px;
 
 }
-
+.reviews-wrapper{
+  width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    
+}
+.reviews-btn{
+ 
+  display: flex;
+  padding: 6px 14px;
+  background-color: #fff;
+  width: fit-content;
+  height: fit-content;
+  border-radius: 100px;
+  font-size: 12px;
+  line-height: 20px;
+  color: #000;
+  font-family: 'Gotham Black';
+  cursor: pointer;
+  text-decoration: none;
+}
 .profile-posts {
   width: calc(100% - 20px);
   margin-left: 20px;
@@ -435,6 +542,28 @@ img.logo-container{
   box-shadow: 0 0 80px rgba(0, 0, 0, 0.2);
   padding: 25px;
   z-index: 10;
+}
+.reviews-individual{
+  margin: 3rem;
+  padding: 3rem;
+  background-color: #fff;
+  border-radius: 10px 10px 10px 10px;
+  border-radius: 25px;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(30px);
+  box-shadow: 0 0 80px rgba(0, 0, 0, 0.2);
+
+}
+.reviews-title{
+  font-family: 'Gotham Black';
+    font-size: 18px;
+    color: #000;
+    text-decoration: none;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    align-items: center;
+    text-align: left;
+    margin-left: 3rem;
 }
 
 .profile-posts h3 {
@@ -468,38 +597,65 @@ img.logo-container{
   font-weight: 700;
   padding: 0px 20px 0px;
 }
+img.highlight{
+  width: 50px;
+  height: 50px;
+  margin-left: 20px;
+  border-radius: 50px;
+  background: rgba(20,23,45,0.25);
+  border: solid 2px rgba(7, 255, 119, 0.25);
+  -webkit-box-shadow: -8px -8px 20px 0px rgba(255,255,255,0.8);
+  -moz-box-shadow: -8px -8px 20px 0px rgba(255,255,255,0.8);
+  box-shadow: -8px -8px 20px 0px rgba(255,255,255,0.8);
 
+}
+.highlights{
+  padding-top: 20px;
+}
 /*---profile settings---*/
-
+.browse{
+  width: 250px;
+}
 .profile-settings {
   width: calc(100% - 20px);
   height: fit-content;
-  margin-top: 20px;
+  margin-top: 10px;
   padding: 20px;
   background-color: #161616;
   border-radius: 10px 10px 10px 10px;
+  border-radius: 25px;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(30px);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 80px rgba(0, 0, 0, 0.2);
+  overflow: hidden; 
 }
 
 .profile-settings h3 {
   font-size: 18px;
   line-height: 20px;
-  color: #fff;
-  font-family: Roboto;
+  color: #000;
+  font-family: 'Gotham Black';
   font-weight: 900;
 }
 
 .profile-settings p {
   font-size: 12px;
   line-height: 20px;
-  color: #fff;
+  color: #000;
   font-family: Roboto;
   font-weight: 500;
   padding: 10px 0;
 }
 
+.separator{
+  border: 2px solid #111;
+  margin-bottom: 20px;
+  width: 100px;
+  text-align: center;
+}
 .profile-settings input {
   width: calc(100% - 20px);
-  padding: 20px 10px;
   border: none;
   border-radius: 10px 10px 10px 10px;
   font-size: 12px;
@@ -525,36 +681,36 @@ img.logo-container{
 .profile-settings button {
   display: block;
   padding: 6px 14px;
-  background-color: #3F97EF;
+  background-color: #000;
   width: fit-content;
   height: fit-content;
   border-radius: 100px;
   font-size: 12px;
   line-height: 20px;
-  color: #111;
-  font-family: Roboto;
-  font-weight: 500;
+  color: #fff;
+  font-family: 'Gotham black';
   cursor: pointer;
   margin: 20px 0px;
   text-decoration: none;
   border: none;
 }
+div.user-container{
+  width: 50px;
+  height: 50px;
 
+}
 .profile-settings button:hover {
   transition: all 200ms ease-in-out;
   color: #fff;
 }
-/*
-.profile-username-display{
-  
-}
-*/
+
 /* Gallery */
 .cases-links{
    
     padding: 3rem;
     
 }
+
 /* file -selector - button */
 input::file-selector-button {
   margin: 20px 20px;
@@ -565,6 +721,8 @@ input::file-selector-button {
     #443197 100%,
     #315897 200%
   );
+  font-family: 'Gotham Black';
+  text-transform: uppercase;
   background-position-x: 0%;
   background-size: 200%;
   border: 0;
@@ -591,6 +749,7 @@ input::file-selector-button:hover {
   padding-top: 20px;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .cases-links h2 {
@@ -627,6 +786,13 @@ input::file-selector-button:hover {
   align-items: center;
   padding: 5px;
   margin: 5px;
+  display: flex;
+  border-radius: 25px;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(30px);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 80px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
 }
 
 .image{
@@ -675,13 +841,46 @@ flex-direction: row;
   display:flex;
   flex-direction: column;
   justify-content: center;
+}
+
+.about-form{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
 
 }
+
 .form-wrapper{
   width: 15rem;
   margin-left: auto;
   margin-right: auto;
   
+}
+.contact-form-wrapper{
+  width: 30rem;
+  margin-left: auto;
+  margin-right: auto;
+  
+}
+.contact-img{
+  width: 350px;
+  height: auto;
+  position: absolute;
+  z-index: 1;
+}
+.contact-section-text{
+  position:relative;
+/* margin-left: 20px;
+margin-right: 20px; */
+  z-index: 998;
+  top: -150px;
+}
+.contact-btn{
+  width: 150px;
+  width: 150px;
+  text-align: center;
+  position: relative;
+  left: 340px;
 }
 .input-wrapper{
   display: flex;
@@ -696,6 +895,11 @@ position: absolute;
 width: 80%;
 }
 
+.input-wrapper2 .input-label, .input-wrapper2 .input-text2{
+  width: 80%;
+  }
+
+
 .input-wrapper .input-text{
   padding: 0.6rem 1rem;
   border-radius: 2rem;
@@ -705,10 +909,30 @@ width: 80%;
   transition: all 0.2s ease;
   background: #E5F3FE;
 }
+
+.input-wrapper2 .input-text2{
+  padding: 0.6rem 1rem;
+  border-radius: 2rem;
+  box-shadow: inset 2px 2px 5px #BABECC, inset -5px -5px 10px #EEE;
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  transition: all 0.2s ease;
+  background: #E5F3FE;
+}
+
 .input-wrapper .input-text:focus{
   box-shadow: inset 2px 2px 1px #BABECC, inset -2px -2px 5px #EEE;
 }
+.input-wrapper2 .input-text2:focus{
+  box-shadow: inset 2px 2px 1px #BABECC, inset -2px -2px 5px #EEE;
+}
 .input-wrapper .input-label{
+  left: 1rem;
+  text-shadow: 1px 1px 1px #FFF;
+  pointer-events:none;
+  transition: all 0.6s ease;
+}
+.input-wrapper2 .input-label{
   left: 1rem;
   text-shadow: 1px 1px 1px #FFF;
   pointer-events:none;
@@ -720,3 +944,64 @@ width: 80%;
   color: #AAA;
 }
 
+.Artworks-title{
+  font-family: 'Gotham Black';
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 20px;
+  margin-right: 35px;
+}
+
+.newsletter-p{
+  align-items: center;
+  text-align: center;
+}
+.message-container {
+font-family: 'Roboto';
+font-size: 20px;
+color: #3c763d;
+padding: 15px;
+margin-bottom: 20px;
+text-align: center;
+}
+/* .together{
+  display: flex;
+  flex-direction: row;
+} */
+.posts{
+  display: flex;
+  justify-content: flex-end;
+  text-align: right;
+  left: 517px;
+  position: relative;
+}
+a.follow{
+  margin-left: 10px;
+    background-color: black;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    left: 27px;
+    margin-bottom: 10px;
+}
+.newsletter{
+  width: 100%;
+  height: 200px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  /* border-radius: 10px 10px 10px 10px;
+  border-radius: 25px; */
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(30px);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 80px rgba(0, 0, 0, 0.2);
+  /* padding: 25px; */
+}
