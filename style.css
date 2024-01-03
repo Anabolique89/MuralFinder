@@ -151,6 +151,14 @@ header a:hover {
     color: #fff;
     opacity: 100%;
 }
+/*--contact form --*/
+
+
+.contact-form-text{
+    width: 200px;
+    margin-left: 150px;
+  }
+
 
 
 /* Responsive styles for screens smaller than 768px (e.g., mobile) */

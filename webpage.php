@@ -12,7 +12,7 @@ session_start();
     <title>ArtZoro Presentation Website</title>
     <link rel="stylesheet" href="style1.css">
     <link rel="stylesheet" href="footer.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 </head>
 
@@ -30,7 +30,7 @@ session_start();
                         <li><a href="walls.php">WALLS</a></li>
                         <li><a href="community.php">COMMUNITY</a></li>
                         <li><a href="shops.php">SHOPS</a></li>
-                        <li><a href="contact.php">CONTACT</a></li>
+                        <li><a href="contactPage.php">CONTACT</a></li>
                     </ul>
                 </div>
                 <ul class="menu-member">
@@ -55,14 +55,15 @@ session_start();
             <!--insert carousel hero section here-->
             <section class="index-intro">
                 <div class="index-intro-bg">
-
+                    <div class="video"><img src="img/graphics/fluidElement4.png" alt="fluidelement 1" class="hero-graphic1"></div>
                     <div class="wrapper">
                         <div class="index-intro-c1">
 
-                            <div class="video"><img src="img/graphics/Sequence 01.gif" alt="fluidelement 1" class="hero-graphic1"></div>
-                            <a href="#" class="fa fa-facebook"></a>
-                            <a href="#" class="fa fa-instagram"></a>
-                            <p>A platform that connects the urban art community worldwide and allows artists to explore new
+                            <!-- <div class="video"><img src="img/graphics/" alt="fluidelement 1" class="hero-graphic1"></div> -->
+                            <i class="fa-brands fa-x-twitter icon"></i>
+                            <i class="fa-brands fa-facebook icon"></i>
+                            <i class="fa-brands fa-instagram icon"></i>
+                            <p class="cardss p2">A platform that connects the urban art community worldwide and allows artists to explore new
                                 terrain and expand their creative talents easily all the while meeting new people and sharing
                                 new experiences with fellow artists. </p>
                         </div>
@@ -111,9 +112,9 @@ session_start();
                         <div class="index-intro-c1">
 
                             <div class="video">
-                                <img src="img/graphics/szxc.png" alt="fluidelement 2" class="hero-graphic">
+                                <img src="img/graphics/sfa1.png" alt="fluidelement 2" class="hero-graphic">
                             </div>
-                            <p>If you are an artist or a stakeholder and you want to share a new painted wall with the world for them to paint on or just explore in a certain location, we are here to make that happen. Just contact us and we will verify the information and make it happen! </p>
+                            <p class="cardss">If you are an artist or a stakeholder and you want to share a new painted wall with the world for them to paint on or just explore in a certain location, we are here to make that happen. Just contact us and we will verify the information and make it happen! </p>
                         </div>
                         <div class="index-intro-c2">
                             <h2>Review<br>Walls</h2>
@@ -152,7 +153,7 @@ session_start();
                             <div class="video">
                                 <img src="img/graphics/sdfc.png" alt="fluidelement 3" class="hero-graphic">
                             </div>
-                            <p>If you are a registered user and have any legal walls in mind don't hesitate to add them to our map. By doing this you are sharing with and helping
+                            <p class="cardss">If you are a registered user and have any legal walls in mind don't hesitate to add them to our map. By doing this you are sharing with and helping
                                 thousands of artists that are looking for places to paint or explore. </p>
                         </div>
 
@@ -169,7 +170,7 @@ session_start();
 
 
                     <div class="video2">
-                        <img src="img/graphics/sdfc.png" alt="fluidelement 3" class="hero-graphic contact-img">
+                        <img src="img/graphics/xs.png" alt="fluidelement 3" class="hero-graphic contact-img">
                     </div>
                     <p class="contact-section-text">
                         Please don't hesitate to write to us if you have any suggestions about how we can improve and be of
@@ -179,7 +180,7 @@ session_start();
                         some basic web searches usually quickly confirm it. If not, do some research. Here is how to go about this. Find our blog
                         posts where we share all the information you need to know when searching for walls to paint or visit.
                         <br><br>
-                        Still now satisfied? Write to us now and we will try to get back to you asap.
+                        Still not satisfied? Write to us now and we will try to get back to you asap.
                     </p>
 
                     <!-- <a class="header-login-a contact-btn" href="contact.php">LEARN MORE</a> -->
@@ -218,9 +219,9 @@ session_start();
                         <div class="index-intro-c1">
 
                             <div class="video">
-                                <img src="img/graphics/sds.png" alt="fluidelement4" class="hero-graphic">
+                                <img src="img/graphics/sd.png" alt="fluidelement4" class="hero-graphic">
                             </div>
-                            <p>If you are an artist or a stakeholder and you want to share a new painted wall with the world for them to paint on or just explore in a certain location, we are here to make that happen. Just contact us and we will verify the information and make it happen! </p>
+                            <p class="cardss">If you are an artist or a stakeholder and you want to share a new painted wall with the world for them to paint on or just explore in a certain location, we are here to make that happen. Just contact us and we will verify the information and make it happen! </p>
                         </div>
                         <div class="index-intro-c2">
                             <h2>Find New<br>Walls</h2>

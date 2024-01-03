@@ -72,7 +72,7 @@ $profileInfo = new ProfileInfoView();
                         ?></p>
                     <div class="highlights">
                         <img class="highlight" src="img/artworks/artworks67.jpg" alt="highlights">
-                        <img class="highlight" src="img/map.jpg" alt="highlights">
+                        <img class="highlight" src="img/artworks/copenhagen-murals-outdoor.654e4e94b54df0.38933123.jpg" alt="highlights">
                         <img class="highlight" src="img/artworks/artworks60.jpg" alt="highlights">
                         <img class="highlight" src="img/artworks/logooo.png" alt="highlights">
                         <img class="highlight" src="img/artworks/longname.jpg" alt="highlights">
