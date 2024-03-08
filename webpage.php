@@ -187,7 +187,10 @@ session_start();
                 </div>
                 <div class="contact-form-wrapper">
 
-
+<?php
+if(isset($_GET["maximumLimitReached"])){
+   echo "<div class='alert alert-danger'>Maximum Limit Reached</div>" ;}
+ ?>
                     <br>
                     <form class="about-form" action="contactform.php" method="post">
                         <div class="input-wrapper2">
