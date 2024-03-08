@@ -19,13 +19,6 @@ include_once "header.php";
     <main class="main">
         <img src="./img/graphics/bubbles.png" class="hero-graphic0" alt="hero-graphic0">
 
-        <!-- <div class="onboarding-page2">
-            <h1 class="roboto-uppercase-heading">Urban Art Worldwide</h1>
-            <p class="welcome-heading-small">And new places on the map.</p>
-            <p class="welcome-text">Find your favourite walls and share your work while
-                exploring and travelling the world.</p>
-            <a href="welcome3.php" class="btn">Next</a>
-        </div> -->
         <div class="onboarding-page3">
             <div class="contact-form-wrapper">
 

@@ -13,4 +13,7 @@ if (isset($_POST['submit'])) {
 
     mail($mailTo, $subject, $txt, $headers);
     header("Location: webpage.php?mailsend");
+    exit();
+
+    
 }

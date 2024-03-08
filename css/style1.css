@@ -240,7 +240,7 @@ background-size: cover;
   /* padding: 25px; */
 }
 .graphics{
-  width: 80;
+  width: 80px;
   position: absolute;
   z-index: 1;
 }
