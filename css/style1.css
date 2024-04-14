@@ -585,8 +585,6 @@ img.logo-container{
   font-size: 14px;
   line-height: 20px;
   color: #000;
-  font-family: Roboto;
-  font-weight: 300;
 }
 
 .profile-content {
@@ -1618,4 +1616,9 @@ section .about-cards::before{
 .roboto-uppercase-heading{
   font-family: 'Gotham Black';
 
+}
+.alert-danger{
+  font-family: "Gotham Black";
+  font-weight: bold;
+  color: red;
 }

@@ -37,7 +37,7 @@ if (isset($_POST['submit'])) {
     // die();
 
     if (isset($_SESSION['submission_count'][$userIP]) && $_SESSION['submission_count'][$userIP] >= 2) {
-        header("Location: webpage.php?maximumLimitReached");
+        header("Location: ../webpage.php?maximumLimitReached");
         exit(); // Stop further execution
     }
 

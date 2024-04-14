@@ -21,7 +21,7 @@ class Signup extends Dbh
 
 
 
-        if (!$stmt->execute(array($username, $hashedPwd, $email, $profile, $role))) {
+        if (!$stmt->execute(array($username, $hashedPwd, $email, $profile, "Admin"))) {
             $stmt = null;
             header("location: ../indexsignup.php?error=stmtfailed");
             exit();

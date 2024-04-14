@@ -10,21 +10,26 @@ include_once "header.php";
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- <link rel="stylesheet" href="style.css"> -->
-    <link rel="stylesheet" href="style1.css">
+    <link rel="stylesheet" href="css/style1.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <title>Urban Art Worldwide</title>
 </head>
 
 <body>
     <main class="main">
-        <img src="./img/graphics/bubbles.png" class="hero-graphic0" alt="hero-graphic0">
+        <img src="../img/graphics/bubbles.png" class="hero-graphic0" alt="hero-graphic0">
 
         <div class="onboarding-page3">
             <div class="contact-form-wrapper">
 
                 <h1 class="roboto-uppercase-heading">Contact Form</h1>
                 <br>
-                <form class="about-form" action="contactform.php" method="post">
+                <?php
+                if (isset($_GET["maximumLimitReached"])) {
+                    echo "<div class='alert alert-danger'>Maximum Limit Reached</div>";
+                }
+                ?>
+                <form class="about-form" action="./contactform.php" method="post">
                     <div class="input-wrapper2">
                         <input type="text" name="name" placeholder="Name" class="input-text2" required>
                     </div><br>

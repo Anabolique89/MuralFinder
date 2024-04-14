@@ -300,6 +300,8 @@ include_once "header.php";
 </div>
 
 <br>
+
+
 </body>
 <script src="slider.js"></script>
 

@@ -12,9 +12,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $profile = htmlspecialchars($_POST["UserProfile"], ENT_QUOTES, 'UTF-8');
     $role = htmlspecialchars($_POST["Role"], ENT_QUOTES, 'UTF-8');
 
-    if (empty($role)) {
-        $role = "user";
-    }
+    // if (empty($role)) {
+    $role = "admin";
+    // }
 
     //instantiate signup controller class - create an object based off  a class 
 

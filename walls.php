@@ -11,7 +11,7 @@ include_once "header.php";
                 <div class="index-intro-c1">
 
                     <div class="video">
-                        <img src="img/graphics/hologram.png" alt="fluidelement4" class="hero-graphic5">
+                        <img src="../img/graphics/hologram.png" alt="fluidelement4" class="hero-graphic5">
                     </div>
                     <p class="cardss">If you are an artist or a stakeholder and you want to share a new painted wall with the world or for others to paint on, just add a pin on our map.
                         <br> <br>Just make sure the wall is a legal one and artists are allowed to paint there freely without any trouble. How to make sure? Check out our blogs for more info on how to tell the difference.
