@@ -10,6 +10,7 @@ session_start();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ArtZoro Presentation Website</title>
     <link rel="stylesheet" href="css/style1.css">
+    <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js" integrity="sha512-Ysw1DcK1P+uYLqprEAzNQJP+J4hTx4t/3X2nbVwszao8wD+9afLjBQYjz7Uk4ADP+Er++mJoScI42ueGtQOzEA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.css" integrity="sha512-pmAAV1X4Nh5jA9m+jcvwJXFQvCBi3T17aZ1KWkqXr7g/O2YMvO8rfaa5ETWDuBvRq6fbDjlw4jHL44jNTScaKg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -27,10 +28,10 @@ session_start();
                     <li><a href="webpage.php">HOME</a></li>
                     <li><a href="about.php">ABOUT</a></li>
                     <li><a href="map.php">MAP</a></li>
-                    <li><a href="walls.php">WALLS</a></li>
+                    <li><a href="Walls/walls.php">WALLS</a></li>
                     <li><a href="community.php">COMMUNITY</a></li>
-                    <li><a href="T&C's.php">T&C's</a></li>
-                    <li><a href="contactPage.php">CONTACT</a></li>
+                    <li><a href="Legal/FAQS.php">FAQ's</a></li>
+                    <li><a href="Contact/contactPage.php">CONTACT</a></li>
                 </ul>
                 <div class="hamburger">
                     <span class="bar"></span>

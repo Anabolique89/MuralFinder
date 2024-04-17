@@ -50,6 +50,6 @@ if (isset($_POST['submit'])) {
     $txt = "You have received an email from " . $name . " . \n\n" . $message;
 
     mail($mailTo, $subject, $txt, $headers);
-    header("Location: webpage.php?mailsend");
+    header("Location: ../webpage.php?mailsend");
     exit();
 }

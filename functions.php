@@ -1,8 +1,9 @@
 <?php
-session_start();
+
 include_once "classes/dbh.classes.php";
 $instance = new Dbh();
 $conn = $instance->connect();
+// $dbh = $instance->connect();
 
 $id = $_SESSION['userid'];
 
@@ -84,4 +85,29 @@ function deleteArtwork($id, $conn)
     $stmt->execute([$id]);
     $stmt->closeCursor();
     deleteOldImage($imageFilename);
+}
+
+function getNumOfFollowers($conn)
+{
+    // $id = $_SESSION['userid'];
+    // $sqlSelect = "SELECT COUNT(*) FROM `followers` WHERE followers.follower_id = ?";
+    // $stmtSelect = $conn->prepare($sqlSelect);
+    // $stmtSelect->bindParam(':id', $id, PDO::PARAM_INT);
+    // $stmtSelect->execute();
+    // $rowsCount = $stmtSelect->fetchColumn();
+    // return $rowsCount;
+    return 50;
+    
+}
+
+function getNumOfFollowing($conn)
+{
+    // $id = $_SESSION['userid'];
+    // $sqlSelect = "SELECT COUNT(*) FROM `followers` WHERE followers.following_id = ?";
+    // $stmtSelect = $conn->prepare($sqlSelect);
+    // $stmtSelect->bindParam(':id', $id, PDO::PARAM_INT);
+    // $stmtSelect->execute();
+    // $rowsCount = $stmtSelect->fetchColumn();
+    // return $rowsCount;
+    return 100;
 }

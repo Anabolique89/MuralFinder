@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
+if ($_SERVER["REQUEST_METHOD"] == "POST" && !isset($_POST['follower'])) {
 
     //grabbing the data
 
@@ -12,9 +12,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $profile = htmlspecialchars($_POST["UserProfile"], ENT_QUOTES, 'UTF-8');
     $role = htmlspecialchars($_POST["Role"], ENT_QUOTES, 'UTF-8');
 
-    // if (empty($role)) {
-    $role = "admin";
-    // }
+    if (empty($role)) {
+        $role = "Admin";
+    }
 
     //instantiate signup controller class - create an object based off  a class 
 
@@ -49,4 +49,47 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     //going back to front page 
     header("location: ../profile.php?error=none");
     exit();
+}
+
+//FOLLOW USER
+
+if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['follow'])) {
+
+    try {
+        $follower =  $_POST['follower'];
+        $followed =  $_POST['followed'];
+        $dbCnx = new PDO('mysql:host=localhost;dbname=ArtzoroDB3', "root", "");
+        $stm = $dbCnx->prepare("INSERT INTO followers(follower_id, followed_id, date_time) VALUES (?, ?, NOW())");
+        $stm->execute([$follower, $followed]);
+
+        echo    "<script>
+                    alert('Data saved successfully');
+                    document.location='../profile.php';
+                </script>";
+    } catch (Exception $e) {
+        return $e->getMessage();
+    }
+} else {
+    echo 'else';
+}
+
+// UNFOLLOW USER
+if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['unfollow'])) {
+
+    try {
+        $follower =  $_POST['follower'];
+        $followed =  $_POST['followed'];
+        $dbCnx = new PDO('mysql:host=localhost;dbname=ArtzoroDB3', "root", "");
+        $stm = $dbCnx->prepare("DELETE FROM followers WHERE follower_id = ? AND followed_id = ?");
+        $stm->execute([$follower, $followed]);
+
+        echo    "<script>
+                    alert('Data removed successfully');
+                    document.location='../profile.php';
+                </script>";
+    } catch (Exception $e) {
+        return $e->getMessage();
+    }
+} else {
+    echo 'else';
 }

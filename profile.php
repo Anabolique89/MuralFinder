@@ -5,6 +5,7 @@ include_once "header.php";
 include "classes/dbh.classes.php";
 include "classes/profileinfo.classes.php";
 include "classes/profileinfo-view.classes.php";
+include "functions.php";
 
 $profileInfo = new ProfileInfoView();
 ?>
@@ -51,8 +52,8 @@ $profileInfo = new ProfileInfoView();
                     <p class="profile-username-display"> <?php
                                                             $profileInfo->fetchAbout($_SESSION["userid"]);
                                                             ?></p>
-                    <h3>FOLLOWERS <span class="followers">56</span></h3>
-                    <h3>FOLLOWING <span class="following">23</span></h3>
+                    <h3>FOLLOWERS <span class="followers"><?php echo getNumOfFollowers($conn); ?></span></h3>
+                    <h3>FOLLOWING <span class="following"><?php echo getNumOfFollowing($conn); ?></span></h3>
                     <!-- <hr class="separator"> -->
 
                     <div class="break"></div>
@@ -123,11 +124,26 @@ $profileInfo = new ProfileInfoView();
                     mysqli_stmt_execute($stmt);
                     $result = mysqli_stmt_get_result($stmt);
                     while ($row = mysqli_fetch_assoc($result)) {
-                        echo '   <a class="artwork-contain" href="#">
+                        // individual artwork container
+                        echo '<div class="artwork-contain">   
                             <div class="image" style="background-image: url(img/artworks/' . $row["ImgFullNameArtwork"] . ');"></div>
                             <h3>' . $row["TitleArtwork"] . '</h3>
                             <p>' . $row["DescArtwork"] . '</p>
-                        </a> ';
+                            <h1 style="color:red;" >' . $row["UserID"] . '</h1>
+                            <div>
+                                <span class="material-symbols-outlined">star</span>
+                                <img class="profile-info-im" src="img/artworks/' . $row["ImgFullNameArtwork"] . ');">
+                                ' . $row["ImgFullNameArtwork"] . '
+
+                            </div>
+                            <form action="./includes/signup.inc.php" method="post">
+                                <input type="hidden" value="' . $row["UserID"] . '" name="followed" >
+                                <input type="hidden" value="' . $id . '" name="follower" >
+                                <input type="submit" value="follow" name="follow" >
+                                <input type="submit" value="unfollow :/" name="unfollow" >
+                            </form>
+                            </div>';
+                        // 
                         if ($_SESSION["Role"] == "Admin") {
 
                 ?>

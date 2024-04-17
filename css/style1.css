@@ -187,12 +187,12 @@ background-image: linear-gradient(0deg, #4158D0 0%, #C850C0 30%, #c2f9cd 66%, #5
 /* background-image: linear-gradient(0deg, #4158D0 0%, #C850C0 30%, #c2f9cd 66%, #5bd2e7 100%); */
 /* background-color: #f07b43;
 background-image: linear-gradient(0deg, #f07b43 0%, #ffbf99 50%, #ff92b3 100%); */
-background-color: #2BD2FF;
+/* background-color: #2BD2FF;
 background-image: linear-gradient(45deg, #2BD2FF 0%, #FA8BFF 52%, #2ddbee 90%);
 background-position: center;
 background-repeat: no-repeat;
 background-size: cover;
-
+height: 100%; */
 }
 .homepage2{
   width: 100%;

@@ -28,10 +28,10 @@ session_start();
                         <li><a href="webpage.php">HOME</a></li>
                         <li><a href="about.php">ABOUT</a></li>
                         <li><a href="map.php">MAP</a></li>
-                        <li><a href="walls.php">WALLS</a></li>
+                        <li><a href="Walls/walls.php">WALLS</a></li>
                         <li><a href="community.php">COMMUNITY</a></li>
-                        <li><a href="T&C's.php">T&C's</a></li>
-                        <li><a href="contactPage.php">CONTACT</a></li>
+                        <li><a href="Legal/FAQS.php">FAQ's</a></li>
+                        <li><a href="Contact/contactPage.php">CONTACT</a></li>
                     </ul>
                 </div>
                 <ul class="menu-member">
@@ -163,7 +163,6 @@ session_start();
             </section>
             <!--wall feed or POST FEED goes here-->
             <!--contact form-->
-            <!-- <h2 class="Artworks-title">HAVE A BURNING QUESTION?</h2> -->
             <section class="index-intro2">
 
                 <div class="index-intro-c1 contact-form-text">
@@ -194,7 +193,7 @@ session_start();
                     }
                     ?>
                     <br>
-                    <form class="about-form" action="contactform.php" method="post">
+                    <form class="about-form" action="Contact/contactform.php" method="post">
                         <div class="input-wrapper2">
                             <input type="text" name="name" placeholder="Name" class="input-text2" required>
                         </div><br>
@@ -240,7 +239,57 @@ session_start();
         </main>
 
     </div>
-  
+    <footer>
+        <div class="tfooter">
+            <div class="tfooter-content">
+                <div class="footers1">
+                    <div class="footer-logo">
+                        <h1 class="footer-h1">MuralFinder</h1>
+                    </div>
+                    <div class="footer-para">
+                        <p class="footer-p">A platform that connects the urban art community worldwide and allows
+                            artists to explore new terrain and expand their creative talents easily.</p>
+
+                    </div>
+                </div>
+
+                <div class="footers1">
+                    <div class="footer-logo">
+                        <h1 class="footer-h1">Contact Info</h1>
+                    </div>
+                    <div class="footer-para">
+                        <p class="footer-p">Spring Valley Street, UBBYCX, London<br>
+                            Call us on: 0044 7899 666 444 <br>
+                            Or email on: muralfinder@info.com
+                        </p>
+                    </div>
+                </div>
+
+                <div class="footers2">
+
+                </div>
+                <div class="footers3">
+                    <h2 class="footer-h2">Projects</h2>
+                    <ul>
+                        <li><a href="#">Sportstrotter</a></li>
+                        <li><a href="#">CalisthenX</a></li>
+                        <li><a href="#">Portfolio</a></li>
+                        <li><a href="#">NFT-center</a></li>
+                    </ul>
+                </div>
+                <div class="footers4">
+                    <h2 class="footer-h2">Navigation</h2>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Portfolio</a></li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </footer>
 </body>
 
 </html>
