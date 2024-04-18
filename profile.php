@@ -7,6 +7,9 @@ include "classes/profileinfo.classes.php";
 include "classes/profileinfo-view.classes.php";
 include "functions.php";
 
+$instancee = new Dbh();
+$connn = $instancee->connect();
+
 $profileInfo = new ProfileInfoView();
 ?>
 
@@ -45,15 +48,15 @@ $profileInfo = new ProfileInfoView();
                                                     }
 
                                                     ?></p>
-                        <a href="profilesettings.php" class="follow-btn follow">FOLLOW</a>
+                        <!-- <a href="profilesettings.php" class="follow-btn follow">FOLLOW</a> -->
                     </div>
 
                     <!-- <h3>ABOUT</h3> -->
                     <p class="profile-username-display"> <?php
                                                             $profileInfo->fetchAbout($_SESSION["userid"]);
                                                             ?></p>
-                    <h3>FOLLOWERS <span class="followers"><?php echo getNumOfFollowers($conn); ?></span></h3>
-                    <h3>FOLLOWING <span class="following"><?php echo getNumOfFollowing($conn); ?></span></h3>
+                    <h3>FOLLOWERS <span class="followers"><?php echo getNumOfFollowers($connn); ?></span></h3>
+                    <h3>FOLLOWING <span class="following"><?php echo getNumOfFollowing($connn); ?></span></h3>
                     <!-- <hr class="separator"> -->
 
                     <div class="break"></div>
@@ -116,7 +119,8 @@ $profileInfo = new ProfileInfoView();
 
                 <?php
                 include_once 'includes/dbh.inc.php';
-                $sql = "SELECT * FROM artwork ORDER BY OrderArtwork DESC";
+                $sql = "SELECT * FROM `artwork` LEFT JOIN followers on artwork.UserID = followers.followed_id ORDER BY DescArtwork DESC";
+
                 $stmt = mysqli_stmt_init($conn);
                 if (!mysqli_stmt_prepare($stmt, $sql)) {
                     echo "SQL statement failed";
@@ -124,25 +128,32 @@ $profileInfo = new ProfileInfoView();
                     mysqli_stmt_execute($stmt);
                     $result = mysqli_stmt_get_result($stmt);
                     while ($row = mysqli_fetch_assoc($result)) {
-                        // individual artwork container
+                        // individual artwork container 
+                        //<img class="profile-info-im" src="img/artworks/' . $row["ImgFullNameArtwork"] . ');">
+                        //   ' . $row["ImgFullNameArtwork"] . '
+                        // ternary condition 145 
                         echo '<div class="artwork-contain">   
                             <div class="image" style="background-image: url(img/artworks/' . $row["ImgFullNameArtwork"] . ');"></div>
                             <h3>' . $row["TitleArtwork"] . '</h3>
                             <p>' . $row["DescArtwork"] . '</p>
                             <h1 style="color:red;" >' . $row["UserID"] . '</h1>
-                            <div>
-                                <span class="material-symbols-outlined">star</span>
-                                <img class="profile-info-im" src="img/artworks/' . $row["ImgFullNameArtwork"] . ');">
-                                ' . $row["ImgFullNameArtwork"] . '
+                            <div class="username-gallery-contain">
+                                <span class="material-symbols-outlined">💙</span>
+                                <img  style="width: 50px; height:50px; border-radius:50%;" class="profile-info-im" src="img/artworks/' . $row["ImgFullNameArtwork"] . '">
 
-                            </div>
+                           
                             <form action="./includes/signup.inc.php" method="post">
                                 <input type="hidden" value="' . $row["UserID"] . '" name="followed" >
                                 <input type="hidden" value="' . $id . '" name="follower" >
-                                <input type="submit" value="follow" name="follow" >
-                                <input type="submit" value="unfollow :/" name="unfollow" >
+                                
+                                ' . ($row["follower_id"] != $id ? '
+                                <input type="submit" value="follow" name="follow" class="follow-btn" >
+                                ' : '
+                                <input type="submit" value="unfollow" name="unfollow" class="follow-btn">') . '
                             </form>
+                            </div>
                             </div>';
+
                         // 
                         if ($_SESSION["Role"] == "Admin") {
 
@@ -227,6 +238,10 @@ $profileInfo = new ProfileInfoView();
         </div>
     </div>
 </section>
+<?php
+
+include_once "footer.php";
+?>
 </body>
 
 

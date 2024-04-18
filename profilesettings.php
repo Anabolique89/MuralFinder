@@ -16,7 +16,7 @@ $profileInfo = new ProfileInfoView();
 
                 <div class="profile-change-wrapper">
                     <?php
-                    //trying to change profile picture here! - but first I'm trying to display a picture next to my form - which is not working. 
+                    //change profile picture here!
                     include_once 'includes/dbh.inc.php';
 
 

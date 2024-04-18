@@ -1,9 +1,9 @@
 <?php
-
 include_once "classes/dbh.classes.php";
+
 $instance = new Dbh();
 $conn = $instance->connect();
-// $dbh = $instance->connect();
+
 
 $id = $_SESSION['userid'];
 
@@ -89,25 +89,25 @@ function deleteArtwork($id, $conn)
 
 function getNumOfFollowers($conn)
 {
-    // $id = $_SESSION['userid'];
-    // $sqlSelect = "SELECT COUNT(*) FROM `followers` WHERE followers.follower_id = ?";
-    // $stmtSelect = $conn->prepare($sqlSelect);
-    // $stmtSelect->bindParam(':id', $id, PDO::PARAM_INT);
-    // $stmtSelect->execute();
-    // $rowsCount = $stmtSelect->fetchColumn();
-    // return $rowsCount;
-    return 50;
-    
+
+    $id = $_SESSION['userid'];
+    $sqlSelect = "SELECT COUNT(*) AS count FROM `followers` WHERE followers.followed_id = ?";
+    $stmtSelect = $conn->prepare($sqlSelect);
+
+    $stmtSelect->execute([$id]);
+    $countResult = $stmtSelect->fetch(PDO::FETCH_ASSOC);
+    $count =  $countResult["count"];
+    return $count;
 }
 
 function getNumOfFollowing($conn)
 {
-    // $id = $_SESSION['userid'];
-    // $sqlSelect = "SELECT COUNT(*) FROM `followers` WHERE followers.following_id = ?";
-    // $stmtSelect = $conn->prepare($sqlSelect);
-    // $stmtSelect->bindParam(':id', $id, PDO::PARAM_INT);
-    // $stmtSelect->execute();
-    // $rowsCount = $stmtSelect->fetchColumn();
-    // return $rowsCount;
-    return 100;
+    $id = $_SESSION['userid'];
+    $sqlSelect = "SELECT COUNT(*) AS count FROM `followers` WHERE followers.follower_id= ?";
+    $stmtSelect = $conn->prepare($sqlSelect);
+
+    $stmtSelect->execute([$id]);
+    $countResult = $stmtSelect->fetch(PDO::FETCH_ASSOC);
+    $count =  $countResult["count"];
+    return $count;
 }

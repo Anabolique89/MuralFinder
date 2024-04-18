@@ -39,7 +39,7 @@ session_start();
                     <?php
                     if (isset($_SESSION["userid"])) {
                     ?>
-                        <li><a href="profile.php"><?php echo $_SESSION["username"]; ?></a></li>
+                        <li><a href="../profile.php"><?php echo $_SESSION["username"]; ?></a></li>
                         <li><a href="includes/logout.inc.php" class="header-login-a">LOGOUT</a></li>
                     <?php
                     } else {

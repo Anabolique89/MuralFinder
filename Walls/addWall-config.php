@@ -72,7 +72,7 @@ class addWallConfig
     public function insertData()
     {
         try {
-            $stm = $this->dbCnx->prepare("INSERT INTO walls(name, status, address, about) values(?, ?, ?, ?)");
+            $stm = $this->dbCnx->prepare("INSERT INTO walls(name, status, address, about) values(?, 0, ?, ?)");
             $stm->execute([$this->name, $this->status, $this->address, $this->about]);
             echo "<script>alert('Data saved successfully');document.location='Walls.php'</script>";
         } catch (Exception $e) {
@@ -95,7 +95,7 @@ class addWallConfig
     {
         try {
 
-            $stm = $this->dbCnx->prepare("SELECT FROM walls WHERE id = ?");
+            $stm = $this->dbCnx->prepare("SELECT FROM walls WHERE WallID=?");
             $stm->execute([$this->id]);
             return $stm->fetchAll();
         } catch (Exception $e) {
@@ -106,7 +106,7 @@ class addWallConfig
     public function update()
     {
         try {
-            $stm = $this->dbCnx->prepare("UPDATE walls SET Name = ?, Status=?, Address=?, About=? WHERE id = ?");
+            $stm = $this->dbCnx->prepare("UPDATE walls SET Name = ?, Status=0, Address=?, About=? WHERE WallID=?");
             $stm->execute([$this->name, $this->status, $this->address, $this->about, $this->id]);
         } catch (Exception $e) {
             return $e->getMessage();
@@ -116,7 +116,7 @@ class addWallConfig
     public function deleteWall()
     {
         try {
-            $stm = $this->dbCnx->prepare("DELETE from walls WHERE id =?");
+            $stm = $this->dbCnx->prepare("DELETE from walls WHERE WallID=?");
             $stm->execute([$this->id]);
             return $stm->fetchAll();
             echo "<script>alert('data deleted successfully'); document.location='Walls.php'</script>";

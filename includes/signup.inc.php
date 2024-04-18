@@ -90,6 +90,4 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['unfollow'])) {
     } catch (Exception $e) {
         return $e->getMessage();
     }
-} else {
-    echo 'else';
 }
