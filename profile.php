@@ -48,7 +48,7 @@ $profileInfo = new ProfileInfoView();
                                                     }
 
                                                     ?></p>
-                        <!-- <a href="profilesettings.php" class="follow-btn follow">FOLLOW</a> -->
+
                     </div>
 
                     <!-- <h3>ABOUT</h3> -->
@@ -129,8 +129,6 @@ $profileInfo = new ProfileInfoView();
                     $result = mysqli_stmt_get_result($stmt);
                     while ($row = mysqli_fetch_assoc($result)) {
                         // individual artwork container 
-                        //<img class="profile-info-im" src="img/artworks/' . $row["ImgFullNameArtwork"] . ');">
-                        //   ' . $row["ImgFullNameArtwork"] . '
                         // ternary condition 145 
                         echo '<div class="artwork-contain">   
                             <div class="image" style="background-image: url(img/artworks/' . $row["ImgFullNameArtwork"] . ');"></div>
