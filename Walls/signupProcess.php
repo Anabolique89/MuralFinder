@@ -1,6 +1,6 @@
 <?php
-if (isset($POST['save'])) {
-    require_once("signupConfig.php");
+if (isset($_POST['save'])) {
+    require_once("addWall-config.php");
     $sc = new addWallConfig();
 
     $sc->setName($_POST['name']);
@@ -8,6 +8,7 @@ if (isset($POST['save'])) {
     $sc->setAddress($_POST['address']);
     $sc->setAbout($_POST['about']);
 
+
     $sc->insertData();
-    echo "<script>alert('Data saved successfully');document.location='Walls.php'</script>";
+    echo "<script>alert('Data saved successfully');document.location='walls.php'</script>";
 }

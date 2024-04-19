@@ -127,6 +127,7 @@ $profileInfo = new ProfileInfoView();
                 } else {
                     mysqli_stmt_execute($stmt);
                     $result = mysqli_stmt_get_result($stmt);
+
                     while ($row = mysqli_fetch_assoc($result)) {
                         // individual artwork container 
                         // ternary condition 145 
@@ -151,21 +152,21 @@ $profileInfo = new ProfileInfoView();
                             </form>
                             </div>
                             </div>';
-
-                        // 
-                        if ($_SESSION["Role"] == "Admin") {
+                    }
+                    // 
+                    if ($_SESSION["Role"] == "Admin") {
 
                 ?>
-                            <form action="delete.php" method="post">
-                                <input type="hidden" name="id" value="<?php echo $row["id"] ?>"> <!-- Replace '123' with your actual item ID -->
-                                <button type="submit" name="delete">Delete</button>
-                            </form> <?php
+                        <form action="delete.php" method="post">
+                            <input type="hidden" name="id" value="<?php echo $row["id"] ?>"> <!-- Replace '123' with your actual item ID -->
+                            <button type="submit" name="delete">Delete</button>
+                        </form> <?php
 
-                                }
                             }
                         }
 
-                                    ?>
+
+                                ?>
             </div>
             <?php
             if (isset($_SESSION['username'])) {

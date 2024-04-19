@@ -110,7 +110,7 @@ session_start();
                         <label for="name">About</label>
                         <input type="text" id="about" name="about" placeholder="About...">
 
-                        <input type="submit" value="Save" name="save">
+                        <input type="submit" value="save" name="save">
                     </form>
                 </div>
             </section>
